@@ -27,7 +27,7 @@ class Agenda:
 def ingresar_evento():
     tipo_evento = input("Ingrese el tipo de evento (Examen, TrabajoPractico, ReunionEstudio): ").strip().lower()
 
-    fecha = input("Ingrese la fecha del evento (YYYY-MM-DD): ")
+    fecha = input("Ingrese la fecha del evento (Dia-Mes-Año): ")
     descripcion = input("Ingrese una descripción del evento: ")
 
     if tipo_evento == "examen":
