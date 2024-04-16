@@ -25,7 +25,7 @@ class Agenda:
 
 # Función para ingresar eventos
 def ingresar_evento():
-    tipo_evento = input("Ingrese el tipo de evento (Examen, TrabajoPractico, ReunionEstudio): ").strip().lower()
+    tipo_evento = input("Ingrese el tipo de evento (Examen, TrabajoPractico, ReunionEstudio): ").lower()
 
     fecha = input("Ingrese la fecha del evento (Dia-Mes-Año): ")
     descripcion = input("Ingrese una descripción del evento: ")
@@ -52,14 +52,14 @@ if __name__ == "__main__":
         evento = ingresar_evento()
         if evento:
             agenda.agregar_evento(evento)
-            continuar = input("¿Desea agregar otro evento? (s/n): ").strip().lower()
+            continuar = input("¿Desea agregar otro evento? (s/n): ").lower()
             if continuar != "s":
                 break
 
     print("\nAgenda:")
     agenda.mostrar_eventos()
 
-    opcion_borrar = input("\n¿Desea borrar algún evento de la agenda? (s/n): ").strip().lower()
+    opcion_borrar = input("\n¿Desea borrar algún evento de la agenda? (s/n): ").lower()
     if opcion_borrar == "s":
         descripcion_eliminar = input("Ingrese la descripción del evento que desea eliminar: ")
         agenda.eliminar_evento_por_descripcion(descripcion_eliminar)

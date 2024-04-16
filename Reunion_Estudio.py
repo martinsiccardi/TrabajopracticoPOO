@@ -1,6 +1,8 @@
+#Importar laclase base
 from Evento import Evento
 
 class ReunionEstudio(Evento):
+    #Constructor de la clase ReunionEstudio
     def __init__(self, fecha, descripcion, tema):
         super().__init__(fecha, descripcion)
         self.tema = tema
